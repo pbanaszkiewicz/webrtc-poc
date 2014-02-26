@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebRTC PoC for Mozilla GSoC 2014 project "Peer instruction"</title>
+
+    <style>
+    body {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+
+    .turned-off {
+      color: #FF0000;
+    }
+    .turned-on {
+      color: #00CC00;
+    }
+    </style>
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <!-- Icon font -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- No need for HTML5 Shim or Respond.js, because IE does not support
+         WebRTC :( -->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Web Voice Mail</a>
+        </div>
+        <!-- <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            <button type="submit" class="btn btn-success">Sign in with Persona</button>
+          </form>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 id="mic" class="turned-off"><i class="fa fa-microphone-slash"></i> Mic</h2>
+          <p>To start the recording:</p>
+          <ol>
+            <li id="allow-mic-hint">allow this webpage to use your microphone</li>
+            <li id="start-recording-hint">click "Start recording" button</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-offset-5 col-sm-2">
+          <button id="start-recording" class="btn btn-success" disabled="disabled">Start recording</button>
+          <button id="stop-recording" class="hidden btn btn-danger">Stop recording</button>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="./webrtc_poc.js"></script>
+  </body>
+</html>
