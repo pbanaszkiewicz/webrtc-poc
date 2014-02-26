@@ -65,6 +65,7 @@ if (window.AudioContext) {
 
         $("#start-recording").toggleClass("hidden")
         $("#stop-recording").toggleClass("hidden")
+        $("#start-recording-hint").css("text-decoration", "line-through")
 
         console.log("Recording started")
     })
@@ -72,6 +73,7 @@ if (window.AudioContext) {
     $("#stop-recording").click(function() {
         $("#start-recording").toggleClass("hidden")
         $("#stop-recording").toggleClass("hidden")
+        $("#start-recording-hint").css("text-decoration", "none")
         filter.disconnect()
         microphone.disconnect()
 
