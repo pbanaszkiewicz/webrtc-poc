@@ -18,6 +18,12 @@
     .turned-on {
       color: #00CC00;
     }
+
+    #recordings {
+      margin: 30px 0 0 0;
+      padding: 0;
+      list-style: none;
+    }
     </style>
 
     <!-- Latest compiled and minified Bootstrap CSS -->
@@ -72,12 +78,21 @@
           <button id="stop-recording" class="hidden btn btn-danger">Stop recording</button>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>Recordings</h2>
+          <ul id="recordings"></ul>
+        </div>
+      </div>
     </div> <!-- /container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="./adapter.js"></script>
+    <script src="./recorder.js"></script>
     <script src="./webrtc_poc.js"></script>
   </body>
 </html>
